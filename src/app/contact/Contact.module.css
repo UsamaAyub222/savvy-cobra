@@ -1,0 +1,160 @@
+.bg{
+    padding: 1rem;
+    background-image: url(/images/smallmobile-bg.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.form {
+    color: var(--secondary-color);
+    padding: 1rem;
+    padding-bottom: 6rem;
+
+}
+
+.error{
+    font-family: var(--primary-font);
+    color: var(--accent-color);
+    padding-bottom: 1rem;
+}
+
+.thanks {
+    font-size: 3rem;
+    font-family: var(--secondary-font);
+    font-weight: 100;
+    color: var(--secondary-color);
+    padding: 10rem 0;
+}
+
+.form button:disabled{
+    cursor:not-allowed;
+    background-color: #8d8d8d;
+}
+
+.contactTitle{
+    padding: 9rem 0 1rem;
+    font-family: var(--secondary-font);
+    color: var(--secondary-color);
+    font-size: 5rem;
+    margin: 0;
+}
+
+.form label {
+    display: block;
+    font-family: var(--primary-font);
+    font-weight: 100;
+
+}
+
+.form input, .form textarea, .form select {
+    font-size: 1.1rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid var(--secondary-color);
+    width: 100%;
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+    padding: 1rem;
+    font-family: var(--primary-font);
+}
+
+.form textarea {
+    height: 7.5rem;
+}
+
+.form button {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    border: none;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: .75rem;
+    width: 7rem;
+    margin-top: 1rem;
+
+}
+
+.sidebar{
+    display: none;
+}
+
+
+
+.contact {
+margin-bottom: 3rem;}
+
+.contact a{
+    color: var(--primary-color);
+    font-weight: 400;
+    font-size: 1.5rem;
+    /* text-decoration: none;   */
+}
+
+.contact .email, .contact .phone{
+    margin-bottom: 1rem;
+}
+
+.contact button {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: none;
+    padding-left: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.socialicons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* margin-bottom: 1.2rem; */
+}
+
+.socialicons a{
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    transition: color .3s ease;
+    -webkit-transition:;
+    -moz-transition:;
+    -ms-transition:;
+    -o-transition:;
+}
+
+.socialicons a:hover {
+    color: var(--accent-color)
+}
+
+@media (min-width: 769px) {
+    .bg{
+    background-image: url(/images/bg.webp);
+        padding: 7rem 1rem 1rem 14rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .sidebar{
+        display: block;
+        padding: 3rem;
+        background-color: var(--secondary-color);
+        color: var(--primary-color);
+        font-family: var(--primary-font);
+    }
+
+    .form h1{
+        padding-top: 0;
+    }
+
+}
+
+@media (min-width: 1300px) {
+.bg {
+    justify-content: center;
+    gap: 5rem;
+}
+.form {
+    width: 500px
+}
+}

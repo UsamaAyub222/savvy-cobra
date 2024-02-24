@@ -1,0 +1,186 @@
+.picContainer {
+    width: 100%;
+    
+}
+
+.picWrapper {
+    max-width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.picWrapper img{
+    width: 100%;
+    height: auto;
+}
+
+.bg{
+    background-image: url('/images/mobile-bg.webp') ;
+    padding: 2rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.about {
+    color: var(--secondary-color);
+    margin-top: 9rem;
+}
+
+.about h1{
+    font-family:var(--secondary-font);
+    font-weight: 900;
+    font-size: 5rem;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+.about p{
+    font-family: var(--primary-font);
+    font-weight: 100;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+.caption {
+    color: var(--secondary-color);
+    font-family: var(--primary-font);
+    font-weight: 100;
+    font-size: .75rem;
+}
+
+.caption span {
+    color: var(--accent-color)
+}
+
+.quote{
+    color: var(--secondary-color);
+    font-family: var(--secondary-font);
+    font-weight: 100;
+    margin: 0;
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.quote p{
+    margin-bottom: 0;
+}
+
+.quote cite{
+    font-family: var(--primary-font);
+    font-size: 1rem;
+    text-align: right;
+    width: 100%;
+    display: block;
+    margin: 1.3rem auto 0 0;
+}
+
+.values h2 {
+    font-family: var(--secondary-font);
+    color: var(--secondary-color);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.values h3, .values p {
+    font-family: var(--primary-font);
+    color: var(--secondary-color);
+    font-weight: 100;
+
+}
+
+.quoteValues .values h3{
+    color: var(--accent-color);
+    margin-bottom: .5rem;
+}
+
+.values p {
+    margin-top: .5rem;
+    margin-bottom: 1.3rem;
+    line-height: 1.5;
+}
+
+@media  (min-width: 769px) {
+    .bg{
+        background-image: url(/images/bg.webp);
+        padding-left: 11rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .aboutPic{
+        display: flex;
+    }
+    .quoteValues {
+        display: flex;
+        margin-bottom: 7rem;
+    }
+
+    .about{
+        margin-top: 0;
+        width: 40%;
+    }
+
+    .about h1{
+        font-size: 7rem;
+    }
+
+    .picContainer {
+        padding: 4rem;
+    }
+
+    .values {
+        padding: 0 2rem;
+    }
+
+}
+
+@media (min-width: 1300px){
+.bg{
+    padding-top: 0;
+}
+
+    .aboutPic{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .picWrapper {
+        width: 77%;
+        position: relative;
+    }
+
+    .picWrapper::after{
+        content: '';
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        background-color: #007F7F ;
+        top: 100%;
+        left: 100%;
+
+    }
+
+    .picWrapper::before{
+        content: '';
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        background-color: var(--secondary-color) ;
+        bottom:0;        
+        left: calc(100% + 60px);
+
+    }
+
+    .quote{
+        padding: 3rem;
+        font-size: 6rem;
+    }
+
+    .quote p{
+
+        margin-top: 0;
+    }
+    .values{
+        margin-top: 50%;
+    }
+}

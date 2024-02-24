@@ -1,0 +1,99 @@
+:root{
+    --primary-color: #1c1c1c;
+    --secondary-color: #fff;
+    --accent-color: #FFD500;
+    --primary-font: Helvetica, sans-serif;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+
+    }
+    header{
+        background-color: var(--primary-color);
+      }
+.logo{
+    position: absolute;
+    z-index: 8;
+}
+
+.logo  img {
+    padding: 0;
+    padding-bottom: 1rem;
+    margin-right: 1rem;
+    width: 6rem;
+}
+
+.logo a {
+    display: flex;
+    font-family: var(--secondary-font);
+    color: var(--secondary-color);
+    text-decoration: none;
+    align-items: center;
+    position: relative;
+    left: 1.5rem;
+    top: 1.5rem;
+}
+.logo .homePageOnly{
+    top: 105vh;
+
+}
+
+.logo h1{
+    font-weight: 100;
+    letter-spacing: 8px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.logo a span {
+    letter-spacing: normal;
+    display: block;
+    font-weight: 900;
+    font-size: 2.4rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+.letter {
+    display: inline-block;
+  }
+
+@media (min-width: 769px) {
+    
+    .logo  img {
+        padding: 0;
+        padding-bottom: 1rem;
+        margin: 0 0 .5rem;
+        width: 6rem;
+    }
+
+    .logo a {
+    position: fixed;
+    top: 1.5rem;
+    left: 1.5rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo .homePageOnly{
+    top: 1.5rem;
+
+}
+
+.logo h1 {
+    margin-top: -1rem;
+    font-size: 1.8rem;
+}
+
+.logo a span {
+    font-size: 2rem;
+    margin-top: 0;
+
+}
+
+}

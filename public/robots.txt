@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://savvycobra.com
+
+# Sitemaps
+Sitemap: https://savvycobra.com/sitemap.xml

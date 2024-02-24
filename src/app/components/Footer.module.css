@@ -1,0 +1,150 @@
+.footerContainer{
+ width: 100%;   
+ background-color: var(--primary-color);
+ padding: 2rem;
+ box-sizing: border-box;
+}
+
+.footerContainer strong{
+    text-align: center;
+    display: block;
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    font-family: var(--secondary-font);
+    font-weight: 100;
+    padding-bottom: 2rem;
+}
+
+.footerContent {
+    /* width: 100%; */
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: flex-start;
+    /* padding-left: 10rem; */
+    color: var(--secondary-color);
+    font-family: var(--secondary-font);
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+
+.link {
+    text-align: center;
+    color: var(--accent-color);
+    font-family: var(--secondary-font);
+    font-weight: 100;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.link a {
+    color: var(--accent-color);
+    /* text-decoration: none; */
+}
+
+
+
+.Newsletter label {
+    display: block;
+}
+
+.Newsletter {
+    /* text-align: left; */
+    margin-bottom: 2.5rem;
+}
+
+.Newsletter input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+    padding: .5rem;
+    font-size: 1.2rem;
+}
+
+.Newsletter button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.contact {
+    margin: 3.5rem 0;
+}
+
+.contact a{
+    color: var(--secondary-color);
+    font-weight: 400;
+    font-size: 1.5rem;
+    /* text-decoration: none;   */
+}
+
+.contact .email, .contact .phone{
+    margin-bottom: 1rem;
+}
+
+.contact button {
+    background-color: transparent;
+    color: var(--secondary-color);
+    border: none;
+    padding-left: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.footerLogo{
+    width: 70px;
+    margin: 0 auto 1rem;
+}
+
+.socialicons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1.2rem;
+}
+
+.socialicons a{
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.footerBottom small{
+    color: var(--secondary-color);
+    font-family: var(--primary-font);
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+@media (min-width: 769px) {
+.footerContainer{
+    padding: 5rem;
+}
+
+    .footerContent{
+        display: flex;
+        justify-content: center;
+        gap: 20%;
+        align-items: flex-start;
+        margin: 5rem 0;
+    }
+
+    .footerContent .contact{
+        margin: 0;
+        padding: 0;
+    }
+.contact p {
+    margin-top: 0;
+}
+.socialicons{
+    max-width: 400px;
+    margin: 2rem auto;
+}
+
+.socialicons a:hover {
+    color: var(--accent-color)
+}
+
+}

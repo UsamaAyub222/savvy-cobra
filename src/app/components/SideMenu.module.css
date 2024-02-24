@@ -1,0 +1,268 @@
+/* ... existing styles ... */
+.calendly{
+text-decoration: none;
+color: var(--accent-color);
+/* background-color: var(--accent-color); */
+border: 1px solid var(--accent-color);
+padding: 1rem;
+align-self: center;
+/* margin: 1rem 0 0 2rem; */
+margin-top: 2rem;
+font-family: var(--primary-font);
+font-size: 1rem;
+font-weight: 100;
+}
+
+.hamburger {
+  position: fixed;
+  width: 50px; /* Adjust width as needed */
+  height: 20px; /* This gives the 2.5:1 aspect ratio */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  top: 2rem;
+  right: 2rem;
+  z-index: 10;
+}
+
+.hamburger span {
+  display: block;
+  position: absolute;
+  height: 2.5px;
+  width: 100%;
+  background: var(--secondary-color);
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+.hamburger span:nth-child(1) {
+  top: 0;
+}
+
+.hamburger span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+.hamburger span:nth-child(3) {
+  bottom: 0;
+}
+
+.hamburger.open span:nth-child(1) {
+  top:7px;
+  transform: rotate(135deg) translateY(-50%);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px; /* Move it out of view */
+}
+
+.hamburger.open span:nth-child(3) {
+  bottom: 50%;
+  transform: rotate(-135deg) translateY(50%);
+  -webkit-transform: rotate(-135deg) translateY(50%);
+  -moz-transform: rotate(-135deg) translateY(50%);
+  -ms-transform: rotate(-135deg) translateY(50%);
+  -o-transform: rotate(-135deg) translateY(50%);
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: -100vw; /* Initially hidden on the left */
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  transition: left 0.3s ease;
+  overflow-y: auto; /* Scrollable if content exceeds the height */
+  font-family: var(--secondary-font); 
+  font-weight: 100; 
+  text-align: center;
+  display: flex ;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 1rem;
+  z-index:9;
+}
+
+.menu.open {
+  left: 0; /* Show the menu */
+}
+
+.menulist {
+  list-style-type: none;
+  padding: 1rem;
+  display: flex;
+  margin:0;
+  flex-direction: column  ;
+  justify-content: space-around;
+}
+
+.menulist li {
+  margin: 0;
+}
+
+.menulist li a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-size: 2rem;
+  display: block;
+  padding: 1rem 10px;
+
+}
+
+
+
+.submenu {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.submenu li a {
+  font-size: 1.1rem;
+}
+
+.socialicons {
+  /* margin-top: 20px; */
+  padding: 0 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.socialicons a {
+  color: #fff;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+
+@media screen and (min-width: 769px) {
+
+  .calendly {
+    display: none;
+  }
+
+  .menu {
+    left: 1rem;
+    background-color: transparent;
+    width: 20rem;
+    height: 100%;
+    text-align: left;
+    z-index: 5;
+    margin-top: 35vh;
+    overflow-x: auto;
+  }
+
+  .socialicons {
+    display: none;
+  }
+
+  .hamburger{
+    display: none;
+  }
+
+  .menulist{
+    width: 7rem;
+  }
+
+  .menulist li {
+    display: inline; 
+    position: relative;
+  }
+
+  .menulist a {
+    transition: color .3s  ;
+    -webkit-transition: color .3s  ;
+    -moz-transition: color .3s  ;
+    -ms-transition: color .3s  ;
+    -o-transition: color .3s  ;
+}
+
+.menulist a:hover {
+  color: var(--accent-color);
+  animation: push;
+  animation-delay: .3s;
+  -webkit-animation: push;
+}
+
+
+.menulist li a {
+  display: block;
+  font-size: 1.4rem;
+  /* overflow: hidden; */
+}
+.menulist >  li > a {
+  position: relative;
+  display: inline-block;
+}
+
+.menulist  > li > a:hover {
+  animation: elastic 0.6s 0.2s forwards;
+  -webkit-animation: elastic 0.6s 0.2s forwards;
+}
+
+@keyframes elastic {
+  50% { transform: translateX(0.5rem); }
+  100% { transform: translateX(0); }
+}
+
+.submenu li a {
+  display: block;
+  width: 10rem;
+      font-size: 1.1rem;
+  }
+  .submenu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    padding-left: 1.5rem;
+    top: .1rem;
+  }
+  .submenuContainer{
+    position: relative;
+
+  } 
+  
+  .submenuContainer:hover .submenu {
+    display: block;
+  }
+  
+  .menulist li .dot {
+    position: absolute;
+    left: -3rem;
+    width: 10px;
+    height: 10px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    transform: translateY(1.5rem);
+    transition: left 0.3s ease;
+    -webkit-transition: left 0.3s ease;
+    -moz-transition: left 0.3s ease;
+    -ms-transition: left 0.3s ease;
+    -o-transition: left 0.3s ease;
+    -webkit-transform: translateY(1.5rem);
+    -moz-transform: translateY(1.5rem);
+    -ms-transform: translateY(1.5rem);
+    -o-transform: translateY(1.5rem);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+  /* When the li is hovered, move the dot to left: 0 */
+  .menulist li:hover .dot {
+    left: -.6rem;
+  }
+  
+  
+}

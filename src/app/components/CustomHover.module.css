@@ -1,0 +1,30 @@
+/* styles/CustomHover.module.css */
+.hoverElement {
+    position: relative;
+    cursor: none; /* Hide the default cursor */
+    z-index: 4;
+    height: 100%;
+    width: 100%;
+}
+
+.hoverLabel {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    font-size: 4rem;
+    color: var(--secondary-color);
+    /* white-space: nowrap; Prevent wrapping of the label */
+    pointer-events: none; /* Ensure it doesn't interfere with actual interactions */
+    z-index: 10; /* High z-index to ensure it's above other elements */
+    font-family: var(--secondary-font);
+    max-width: 100px;
+}
+
+.hoverLabelName {
+    font-size: 1.3rem;
+    line-height: 1;
+}
+
+.plus{
+    line-height: .8;
+}

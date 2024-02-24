@@ -1,0 +1,244 @@
+
+.projectBanner{
+    background-image: url('/images/smallmobile-bg.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--primary-color);
+    background-position: center;
+    box-sizing: border-box;
+    padding: 10rem 2rem 4rem;
+    color: var(--secondary-color);
+    font-family: var(--secondary-font);
+    position: inherit;
+}
+
+.projectBanner h1 {
+    position: relative;
+}
+
+.projectBanner h1 span:first-child{
+    font-size: 2.5rem;
+    margin: 0;
+    line-height: 1;
+    font-family: var(--secondary-font);
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.projectBanner h1 span:nth-child(2) {
+    font-family: var(--secondary-font);
+    font-weight: 100;
+    letter-spacing: 4px;
+    display: block;
+    margin-top: -0.4rem;
+    font-size: 1.3rem;
+}
+
+.projectBanner h1:before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: var(--secondary-color);
+    margin: 1rem 0;
+    position: absolute;
+    bottom: -2rem;
+    animation: scaleX 1s ease-in-out forwards; /* Apply the scaleX animation */
+
+}
+.projectBanner h1 a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.projectBanner h2{
+    font-family: var(--secondary-font);
+    font-size: 2.3rem;
+    /* margin: 0; */
+    line-height: 1;
+    font-weight: 200;
+    text-transform: uppercase;
+    margin-bottom: 0.2rem;
+}
+
+.projectBanner date{
+    text-align: right;
+    display: block;
+    width: 100%;
+    font-weight: 200;
+    color: var(--accent-color);
+}
+
+.mainText h3 {
+    color: var(--accent-color);
+    font-family: var(--primary-font);
+}
+
+.projectImages {
+    background-color: var(--primary-color);
+    padding-bottom: 1rem;
+}
+
+.projectImage{
+    display: block;
+}
+
+.projectImage img{
+    display: block;
+    width: 100%;
+    height: auto;
+    
+}
+
+.mainText {
+    font-family: var(--primary-font);
+    font-weight: 100;
+
+}
+
+.mainText h3 {
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin-top: 3rem;
+}
+
+.mainText p {
+    line-height: 2;
+}
+
+.projectImage p {
+    font-family: var(--primary-font);
+    color: var(--secondary-color);
+    font-weight: 100;
+    line-height: 2;
+    padding: 2rem;
+    font-size: 1rem;
+}
+/* animations */
+.projectBanner h1, .projectBanner h2, .projectBanner date{
+    transform: translateY(-100%);
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+}
+.mainText{
+    transform: translateY(30px);
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+    -moz-transform: translateY(30px);
+    -ms-transform: translateY(30px);
+    -o-transform: translateY(30px);
+}
+
+.projectImage > * {
+    transform: translateY(30px);
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+    -moz-transform: translateY(30px);
+    -ms-transform: translateY(30px);
+    -o-transform: translateY(30px);
+}
+
+
+@keyframes flash {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  .arrow {
+    font-size: 1.5rem;
+    animation: flash 1.5s infinite;
+    color: var(--secondary-color);
+    text-align: center;
+    
+    transform: translateX(-50%);
+    -webkit-animation: flash 1.5s infinite;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+@keyframes scaleX {
+    from {
+      transform: scaleX(0); /* Start with no horizontal scaling */
+    }
+    to {
+      transform: scaleX(1); /* End with full horizontal scaling */
+    }
+  }
+  
+
+@media (min-width: 769px){
+    .projectBanner {
+        width: 100vw;
+        height: auto;
+        background-image: url(/images/bg.webp);
+        padding: 5rem 6rem 4rem 15rem;
+    }
+    .arrow{
+        position: absolute;
+        top: 92vh;
+        left: 50%;
+    }
+    .projectBanner h2{
+        font-size: 7rem;
+    }
+
+    .mainText h3{
+        margin-top: 0;
+        width: 30%;
+    }
+    .mainText p {
+        margin: 0;
+    }
+
+    .mainText {
+        box-sizing: border-box;
+        margin-top: 9rem;
+        margin-bottom: 9rem;
+        display: flex;
+        gap: 2rem;
+    }
+    .projectImages{
+        padding: 5rem 2rem 5rem 15rem;
+        box-sizing: border-box;
+    }
+    .projectImage {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        margin: 5rem 0;
+        box-sizing: border-box;
+    }
+.imageContainer{
+        width: 70%;
+        height: auto;
+    }
+
+    .projectImage img {
+        width: 100%;
+        max-width: 1024px;
+        height: auto;
+        margin: 0 auto;
+        /* max-height: 100vh; */
+    }
+
+    .projectImage p {
+        width: 20%;
+    }
+    .projectImage:nth-child(2n){
+        flex-direction: row-reverse;
+    }
+
+}
